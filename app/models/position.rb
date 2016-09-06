@@ -6,6 +6,6 @@ class Position < ActiveRecord::Base
 
   validates :movie_id, uniqueness: {
     scope: [:cast_and_crew_id, :cast_and_crew_type],
-    message: 'can only add cast and crew once to each movie'
+    message: 'can only add each cast and crew member once to each movie'
   }
 end
